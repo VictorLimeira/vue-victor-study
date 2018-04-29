@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interpolation Examples</title>
+</head>
+<body>
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <div id="app">
+
+    <h3>Basic Insertion:</h3>
+    <p>This is a message in curl brackets: {{ message }}</p>
+    <p v-once>This is a message in curl brackets with v-once: {{ message }}</p>
+
+    <h3>Insert HTML content:</h3>
+
+    <p>This is a html inserted with v-html: <span v-html="insertedHtml"></span></p>
+
+    <h3>Playing with attributes:</h3>
+
+    <button v-bind:disabled="isButtonDisabled">Button attribute false</button>
+    <button v-bind:disabled="isButtonDisabledTrue">Button attribute true</button>
+
+    <h3>Using JavaScript into templates:</h3>
+
+    <p>This is a JavaScript Expression: {{ number * 4 }}</p>
+
+    <h3>Usage of some Directives:</h3>
+
+    <p v-if="seen">Text to be diplayed or not, usage of v-if Directive.
+        <br>
+        More directives exist, for example: v-bind to create bind information to html attributes; v-on that listens to DOM events.
+    </p>
+
+    <p>Also, Directives have shorthand format, for v-bind use ':', and for v-on use '@'.</p>
+    
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Message into data.message!',
+                insertedHtml: '<b>Message into</b> <em>data.insertedHTML!</em>',
+                isButtonDisabled: false,
+                isButtonDisabledTrue: true,
+                number: 4,
+                seen: true,
+            }
+        })
+    </script>
+</body>
+</html>
