@@ -28,6 +28,13 @@
     <h3>Using JavaScript into templates:</h3>
 
     <p>This is a JavaScript Expression: {{ number * 4 }}</p>
+
+    <h3>Usage of some Directives:</h3>
+
+    <p v-if="seen">Text to be diplayed or not, usage of v-if Directive.
+        <br>
+        More directives exist, for example: v-bind to create bind information to html attributes; v-on that listens to DOM events.
+    </p>
     
     </div>
 
@@ -40,6 +47,7 @@
                 isButtonDisabled: false,
                 isButtonDisabledTrue: true,
                 number: 4,
+                seen: true,
             }
         })
     </script>
