@@ -11,14 +11,23 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
     <div id="app">
-    <p>{{ message }}</p>
+
+    <h3>Basic Insertion:</h3>
+    <p>This is a message in curl brackets: {{ message }}</p>
+    <p v-once>This is a message in curl brackets with v-once: {{ message }}</p>
+
+    <h3>Insert HTML content:</h3>
+
+    <p>This is a html inserted with v-html: <span v-html="insertedHtml"></span></p>
+    
     </div>
 
     <script>
         new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue.js!'
+                message: 'Message into data.message!',
+                insertedHtml: '<b>Message into</b> <em>data.insertedHTML!</em>',
             }
         })
     </script>
