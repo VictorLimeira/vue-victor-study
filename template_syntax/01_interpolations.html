@@ -19,6 +19,11 @@
     <h3>Insert HTML content:</h3>
 
     <p>This is a html inserted with v-html: <span v-html="insertedHtml"></span></p>
+
+    <h3>Playing with attributes:</h3>
+
+    <button v-bind:disabled="isButtonDisabled">Button attribute false</button>
+    <button v-bind:disabled="isButtonDisabledTrue">Button attribute true</button>
     
     </div>
 
@@ -28,6 +33,8 @@
             data: {
                 message: 'Message into data.message!',
                 insertedHtml: '<b>Message into</b> <em>data.insertedHTML!</em>',
+                isButtonDisabled: false,
+                isButtonDisabledTrue: true,
             }
         })
     </script>
