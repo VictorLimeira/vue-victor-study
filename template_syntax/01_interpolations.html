@@ -24,6 +24,10 @@
 
     <button v-bind:disabled="isButtonDisabled">Button attribute false</button>
     <button v-bind:disabled="isButtonDisabledTrue">Button attribute true</button>
+
+    <h3>Using JavaScript into templates:</h3>
+
+    <p>This is a JavaScript Expression: {{ number * 4 }}</p>
     
     </div>
 
@@ -35,6 +39,7 @@
                 insertedHtml: '<b>Message into</b> <em>data.insertedHTML!</em>',
                 isButtonDisabled: false,
                 isButtonDisabledTrue: true,
+                number: 4,
             }
         })
     </script>
